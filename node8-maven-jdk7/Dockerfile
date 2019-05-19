@@ -50,20 +50,20 @@ COPY settings-docker.xml /usr/share/maven/ref/
 #add git >>
 RUN apk --update add git less openssh && \
     rm -rf /var/lib/apt/lists/* && \
-    rm /var/cache/apk/*
+    rm /var/cache/apk/* && \
 #<< add git
 
 #add gulp>>
-RUN npm install -g gulp && echo 'registryhttps://registry.npm.taobao.org' > /root/.npmrc
+    npm install -g gulp && echo 'registryhttps://registry.npm.taobao.org' > /root/.npmrc && \
 #<< add gulp
 
 #mod timezone>>
-RUN apk add -U tzdata && \
-    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+    apk add -U tzdata && \
+    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
 #<<mod timezone
 
 #mod npm registry, install yarn
-RUN npm config set registry https://registry.npm.taobao.org && \
+    npm config set registry https://registry.npm.taobao.org && \
     npm install -g yarn && \
     yarn config set registry https://registry.npm.taobao.org
 #<<mod npm registry, install yarn

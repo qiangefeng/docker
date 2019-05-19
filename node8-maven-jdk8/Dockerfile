@@ -47,13 +47,23 @@ COPY mvn-entrypoint.sh /usr/local/bin/mvn-entrypoint.sh
 COPY settings-docker.xml /usr/share/maven/ref/
 #<< add maven
 
+#add git >>
+RUN apk --update add git less openssh && \
+    rm -rf /var/lib/apt/lists/* && \
+    rm /var/cache/apk/* && \
+#<< add git
+
+#add gulp>>
+    npm install -g gulp && echo 'registryhttps://registry.npm.taobao.org' > /root/.npmrc && \
+#<< add gulp
+
 #mod timezone>>
-RUN apk add -U tzdata && \
-    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+    apk add -U tzdata && \
+    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
 #<<mod timezone
 
 #mod npm registry, install yarn
-RUN npm config set registry https://registry.npm.taobao.org && \
+    npm config set registry https://registry.npm.taobao.org && \
     npm install -g yarn && \
     yarn config set registry https://registry.npm.taobao.org
 #<<mod npm registry, install yarn
