@@ -120,5 +120,8 @@ RUN set -ex; \
 		\) -exec rm -rf '{}' +; \
 	rm -f get-pip.py
 
-CMD ["python3"]
 #<< add python3.6
+
+#mod tomcat code
+COPY server.xml /usr/local/tomcat/conf/server.xml
+#<<mod tomcat code
