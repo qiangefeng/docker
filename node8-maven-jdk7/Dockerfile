@@ -53,17 +53,20 @@ RUN apk --update add git less openssh && \
     rm /var/cache/apk/* && \
 #<< add git
 
-#add gulp>>
-    npm install -g gulp && echo 'registryhttps://registry.npm.taobao.org' > /root/.npmrc && \
-#<< add gulp
-
 #mod timezone>>
     apk add -U tzdata && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
 #<<mod timezone
 
-#mod npm registry, install yarn
+#set npm registry >>
     npm config set registry https://registry.npm.taobao.org && \
+#<<set npm registry
+
+#install gulp>>
+    npm install -g gulp && \
+#<<install gulp
+
+#install yarn
     npm install -g yarn && \
     yarn config set registry https://registry.npm.taobao.org
-#<<mod npm registry, install yarn
+#<<install yarn
