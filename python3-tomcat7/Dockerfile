@@ -125,3 +125,4 @@ RUN set -ex; \
 #mod tomcat code
 COPY server.xml /usr/local/tomcat/conf/server.xml
 #<<mod tomcat code
+CMD /usr/local/tomcat/bin/startup.sh && tail -f /etc/hosts
