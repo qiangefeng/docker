@@ -25,5 +25,5 @@ RUN apk --update add git less openssh && \
 #<<install yarn
 
 #install pm2
-    yarn install -g pm2
+    yarn global add pm2
 #<<install pm2
