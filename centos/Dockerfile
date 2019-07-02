@@ -1,7 +1,6 @@
 FROM centos:centos7
 
-RUN yum install openssh-server -y \ 
-    && yum -y install initscripts
+RUN yum install openssh-server openssh-client supervisor -y
 
 #修改root用户密码
 #用以下命令修改密码时，密码中最好不要包含特殊字符，如"!"，否则可能会失败；
@@ -17,7 +16,8 @@ RUN /bin/sed -i 's/.*session.*required.*pam_loginuid.so.*/session optional pam_l
     && /bin/sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config \
     && /bin/sed -i "s/#UsePrivilegeSeparation.*/UsePrivilegeSeparation no/g" /etc/ssh/sshd_config
 
+COPY supervisord.conf /etc/supervisord.conf
 
 EXPOSE 22
 
-CMD nohup sh -c '/usr/sbin/sshd -D && /usr/sbin/init'
+CMD ["/usr/bin/supervisord"]
