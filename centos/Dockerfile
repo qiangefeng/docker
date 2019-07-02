@@ -1,7 +1,7 @@
 FROM centos:centos7
 
 RUN yum install epel-release -y \ 
-    && yum install openssh-server openssh-clients supervisor -y
+    && yum install openssh-server openssh-clients initscripts supervisor -y
 
 #修改root用户密码
 #用以下命令修改密码时，密码中最好不要包含特殊字符，如"!"，否则可能会失败；
@@ -21,4 +21,4 @@ COPY supervisord.conf /etc/supervisord.conf
 
 EXPOSE 22
 
-CMD /usr/bin/supervisord && /usr/sbin/init
+CMD /usr/sbin/init && /usr/bin/supervisord
