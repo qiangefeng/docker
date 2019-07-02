@@ -20,4 +20,4 @@ RUN /bin/sed -i 's/.*session.*required.*pam_loginuid.so.*/session optional pam_l
 
 EXPOSE 22
 
-CMD ["/usr/sbin/sshd","-D"]
+CMD nohup sh -c '/usr/sbin/sshd -D && /usr/sbin/init'
