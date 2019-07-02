@@ -1,6 +1,7 @@
 FROM centos:centos7
 
-RUN yum install openssh-server -y 
+RUN yum install openssh-server -y \ 
+    && yum -y install initscripts
 
 #修改root用户密码
 #用以下命令修改密码时，密码中最好不要包含特殊字符，如"!"，否则可能会失败；
