@@ -22,4 +22,4 @@ COPY supervisord.conf /etc/supervisord.conf
 
 EXPOSE 22
 
-CMD /usr/sbin/init && /usr/bin/supervisord
+CMD /usr/bin/supervisord
