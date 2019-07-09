@@ -122,6 +122,7 @@ RUN set -ex; \
 
 #<< add python3.6
 
+RUN  mkdir -p /opt && ln -s /usr/local/tomcat /opt/tomcat
 #mod tomcat code
 COPY server.xml /usr/local/tomcat/conf/server.xml
 #<<mod tomcat code
