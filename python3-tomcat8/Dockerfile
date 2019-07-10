@@ -1,4 +1,4 @@
-FROM tomcat:8.5.42-jdk8-openjdk
+FROM tomcat:8.5.40-jre8-alpine
 
 #add python3.6 >>
 # ensure local python is preferred over distribution python
