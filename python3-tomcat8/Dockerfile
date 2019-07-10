@@ -125,3 +125,5 @@ RUN  mkdir -p /opt && ln -s /usr/local/tomcat /opt/tomcat
 #mod tomcat code
 COPY server.xml /usr/local/tomcat/conf/server.xml
 #<<mod tomcat code
+
+CMD /usr/local/tomcat/bin/startup.sh && tail -f /etc/hosts
