@@ -11,7 +11,7 @@ RUN curl --silent --location https://rpm.nodesource.com/setup_8.x | bash - && \
 #<<install gulp
 
 #install jdk8>>
-    yum install -y java-1.8.0-openjdk.x86_64 && \
+    yum install -y java-1.8.* && \
 #<<install jdk8
 
 yum install -y wget && \
