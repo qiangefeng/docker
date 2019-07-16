@@ -25,7 +25,7 @@ yum install -y wget && \
 yum install -y git autoconf automake && \
 
 #mod timezone>>
-    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
+    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 #<<mod timezone
 
 COPY maven.sh /etc/profile.d/maven.sh
