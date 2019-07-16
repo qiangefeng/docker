@@ -1,7 +1,7 @@
 FROM centos:centos7
 
 #install node8>>
-    curl --silent --location https://rpm.nodesource.com/setup_8.x | bash - && \
+RUN curl --silent --location https://rpm.nodesource.com/setup_8.x | bash - && \
     yum install -y nodejs && \
 #<<install node8
 
