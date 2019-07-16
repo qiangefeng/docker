@@ -68,20 +68,6 @@ RUN apk --update add git less openssh && \
 
 #install yarn
     npm install -g yarn && \
-    yarn config set registry https://registry.npm.taobao.org && \
+    yarn config set registry https://registry.npm.taobao.org
 #<<install yarn
 
-#install m4>>
-    wget http://mirrors.kernel.org/gnu/m4/m4-1.4.13.tar.gz && \ 
-    tar -xzvf m4-1.4.13.tar.gz && \ 
-    cd m4-1.4.13 && \ 
-    ./configure --prefix=/usr/local && \
-    make && make install && \
-#<<install m4
-#install autoconf>>
-    wget http://mirrors.kernel.org/gnu/autoconf/autoconf-2.65.tar.gz && \ 
-    tar -xzvf autoconf-2.65.tar.gz && \ 
-    cd autoconf-2.65 && \ 
-    ./configure --prefix=/usr/local && \
-    make && make install
-#<<install autoconf
