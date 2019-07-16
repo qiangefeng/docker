@@ -29,3 +29,5 @@ yum install -y git autoconf automake && \
 #<<mod timezone
 
 COPY maven.sh /etc/profile.d/maven.sh
+RUN chmod +x /etc/profile.d/maven.sh && \
+    source /etc/profile.d/maven.sh
