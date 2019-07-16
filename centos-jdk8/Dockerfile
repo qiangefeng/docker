@@ -32,3 +32,4 @@ ENV JAVA_HOME /usr/lib/jvm/java-1.8.0-openjdk
 ENV MAVEN_CONFIG /root/.m2
 ENV MAVEN_HOME /opt/maven
 ENV PATH /opt/maven/bin:$PATH
+ENV NODE_PATH /root/node_modules
