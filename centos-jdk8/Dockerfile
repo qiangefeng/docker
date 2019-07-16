@@ -29,6 +29,6 @@ yum install -y git autoconf automake && \
 #<<mod timezone
 
 ENV JAVA_HOME /usr/lib/jvm/jre-openjdk
-ENV M2_HOME /opt/maven
+ENV MAVEN_CONFIG /root/.m2
 ENV MAVEN_HOME /opt/maven
 ENV PATH /opt/maven/bin:$PATH
