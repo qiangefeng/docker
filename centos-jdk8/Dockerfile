@@ -28,7 +28,7 @@ yum install -y git autoconf automake && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 #<<mod timezone
 
-ENV JAVA_HOME=/usr/lib/jvm/jre-openjdk
-ENV M2_HOME=/opt/maven
-ENV MAVEN_HOME=/opt/maven
-ENV PATH=/opt/maven/bin:$PATH
+ENV JAVA_HOME /usr/lib/jvm/jre-openjdk
+ENV M2_HOME /opt/maven
+ENV MAVEN_HOME /opt/maven
+ENV PATH /opt/maven/bin:$PATH
