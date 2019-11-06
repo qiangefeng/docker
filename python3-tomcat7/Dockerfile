@@ -1,5 +1,9 @@
 FROM tomcat:7.0.94-jre7-alpine
 
+#add font >>
+RUN apk add --update ttf-dejavu
+#<< add font
+
 #add python3.6 >>
 # ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
