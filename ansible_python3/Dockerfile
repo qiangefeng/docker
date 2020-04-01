@@ -1,3 +1,4 @@
+FROM qiangefeng/ansible
 RUN yum -y install wget; \
     yum -y groupinstall "Development tools"; \
     yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel; \
