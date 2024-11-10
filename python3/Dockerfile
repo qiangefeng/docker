@@ -1,3 +1,6 @@
-FROM python:3.7.2-alpine3.9
+FROM python
 
-RUN pip install --upgrade pip && pip install openpyxl && pip install requests && pip install pyyaml
+RUN pip install --upgrade pip 
+RUN pip install openpyxl && pip install requests && pip install pyyaml && pip install pymysql
+RUN pip install nornir
+RUN pip install neo4j
