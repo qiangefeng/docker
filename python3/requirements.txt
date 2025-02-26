@@ -1,0 +1,14 @@
+napalm_h3c_comware
+neo4j
+netifaces
+nornir
+nornir_jinja2
+nornir_napalm
+nornir_netmiko
+nornir_table_inventory
+nornir_utils
+openpyxl
+ping3
+pymysql
+pyyaml
+requests
